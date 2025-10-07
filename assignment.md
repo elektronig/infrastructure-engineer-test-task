@@ -1,6 +1,7 @@
 Test Task for Infrastructure Support Engineer
 
 You need to set up a test lab consisting of two servers:
+
 ● A server with an LDAP server, preferably using FreeIPA.
 ● An application server with Docker installed.
 
