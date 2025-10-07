@@ -27,7 +27,9 @@ The test environment should be deployed in any public cloud of your choice (free
 ● Create three users in LDAP with the following permissions:
 
 user1: SSH access to the application server + **read** permission on Docker’s working directory.
+
 user2: SSH access to the application server + **write** permission on Docker’s working directory.
+
 user3: SSH access to the application server + **read and write** permissions on Docker’s working directory.
 
 You need to document the process of setting up this environment and provide it in any convenient format for review.
