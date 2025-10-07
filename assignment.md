@@ -22,7 +22,7 @@ The test environment should be deployed in any public cloud of your choice (free
 ● Enable Docker to start automatically.
 
 
-3. LDAP Configuration:
+2. LDAP Configuration:
    
 ● Create three users in LDAP with the following permissions:
 
