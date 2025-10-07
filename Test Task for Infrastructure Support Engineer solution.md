@@ -4,34 +4,56 @@
 GCP: us-central1 (Free Tier region)
 
 2 VM instances:
+
 **app-server** (Docker host)
+
 OS: Rocky Linux 8
+
 Specs: e2-small machine (2 vCPUs, 2 GB Memory) 
+
 20GB boot disk
+
 10GB app data disk (separate disk for \app)
+
 Primary internal IP address 10.128.0.5
+
 External static IP address 104.197.135.180
+
 Hostname: app-server.ipa.test
 
+
 **ldap-server** (FreeIPA)
+
 OS: Rocky Linux 8
+
 Specs: e2-small machine (2 vCPUs, 2 GB Memory) 
+
 20GB boot disk
+
 Primary internal IP address 10.128.0.7
+
 External static IP address 34.121.70.125 *
+
 Hostname: server.ipa.test
 
 **Firewall сonfiguration**
+
 allow ingress: 
+
 SSH (TCP 22), RDP (TCP 3389) - for both VMs
+
 HTTP (TCP 80) - **app-server*** *
+
 HTTPS (TCP 443 for FreeIPA Web UI) - **ldap-server** *
+
 \* for test purposes only. In this case **app-server** must work like a bastion host with a public IP and internal access to ldap-server. Access to **app-server** must be restricted using IP white list.
 
 ## **Access information**
+
 http://104.197.135.180/ nginx running in Docker container on **app-server** as an example
 
 https://34.121.70.125/ipa/ui FreeIPA Web UI access just in case
+
 Please add the new entry to your hosts file 
 ```
 34.121.70.125 server.ipa.test 
