@@ -298,7 +298,7 @@ Authselect profile (enables home dir creation and SSSD):
 ```
 authselect select sssd with-mkhomedir --force
 ```
-!Check if SSHD config: /etc/ssh/sshd_config contains:
+Check if SSHD config: /etc/ssh/sshd_config contains:
 ```
 UsePAM yes
 AuthorizedKeysCommand /usr/bin/sss_ssh_authorizedkeys
